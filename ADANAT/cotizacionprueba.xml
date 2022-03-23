@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:com-softwareag-entirex-rpc:SISVE-WPCOTIZ1">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:WPCOTIZ1>
+         <INPUT>
+            <!--Optional:-->
+            <HEADER>
+               <!--Optional:-->
+               <COD-ORIGEN> </COD-ORIGEN>
+               <!--Optional:-->
+               <UI> </UI>
+               <!--Optional:-->
+               <IP> </IP>
+            </HEADER>
+            <!--Optional:-->
+            <ATRIBUTOS>
+               <!--Optional:-->
+               <PESO>1000</PESO>
+               <!--Optional:-->
+               <TIPO-DESTINO>N</TIPO-DESTINO>
+               <!--Optional:-->
+               <IATA-ORIGEN>FWQ</IATA-ORIGEN>
+               <!--Optional:-->
+               <IATA-DESTINO>FDN</IATA-DESTINO>
+               <!--Optional:-->
+               <MERCADO>1</MERCADO>
+               <!--Optional:-->
+               <LARGO>15</LARGO>
+               <!--Optional:-->
+               <ALTO>15</ALTO>
+               <!--Optional:-->
+               <ANCHO>15</ANCHO>
+               <!--Optional:-->
+               <PESO-VOLUMEN>1000</PESO-VOLUMEN>
+               <!--Optional:-->
+               <LINEA>3</LINEA>
+               <!--Optional:-->
+               <NRO-VENTA>0</NRO-VENTA>
+               <!--Optional:-->
+               <RUT-REMITENTE></RUT-REMITENTE>
+               <!--Optional:-->
+               <PORC-DESCUENTO>0</PORC-DESCUENTO>
+            </ATRIBUTOS>
+         </INPUT>
+      </urn:WPCOTIZ1>
+   </soapenv:Body>
+</soapenv:Envelope>

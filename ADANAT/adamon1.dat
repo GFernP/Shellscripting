@@ -1,0 +1,9 @@
+Commands     :                56757            28378
+ASSO I/Os    :                  370              185
+DATA I/Os    :                 3893             1946
+WORK I/Os    :                  507              253
+TEMP I/Os    :                    0                0
+PLOG I/Os    :                  569              284
+Throwbacks   :                    0                0
+Buffer Hit   :                   99%
+Buffer flushs:                    0

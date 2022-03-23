@@ -1,0 +1,31 @@
+#!/usr/bin/bash
+
+. /home/sag/.profile >/dev/null 2>&1
+#serie=$(ls -t /PLOG/aprocesar/plog.* |head -1 |awk -F "." '{print $2}' |awk -F "(" '{print $1}')
+dbid=$1
+serie=$2
+fecha=$(date +%Y%m%d)
+horaini=$(date +%H:%M:%S)
+dirplog=/imagenesPDA/testadabas
+. $dirplog/setrecplg.sh $serie
+
+statrec=$dirplog/lastatrec.log
+adarec db=$dbid regenerate=*,plog=$serie,error_log,on_error=abort |tee -a $dirplog/historec_new.log > $statrec
+horafin=$(date +%H:%M:%S)
+if [ cat $statrec |grep -q "ADAREC-E-ERRNOM" ]
+then
+	echo "ERROR,$fecha,$horaini, regeneracion plog. Revisar archivo $statrec,$horafin" >> $dirplog/historec_new.log
+        exit
+elif [ cat $statrec |grep -q "ADAREC-I-ABORTED" ]
+then
+	echo "ERROR,$fecha,$horaini, regeneracion plog. Revisar archivo $statrec,$horafin" >> $dirplog/historec_new.log
+	exit
+elif
+	echo "OK,$fecha,$horaini,regeneracion plog $serie termina bien,$horafin" >> $dirplog/historec_new.log
+fi
+echo "---------------------------------------------------------" >> $dirplog/historec_new.log
+mv $dirplog/aprocesar/NUCPLG.$serie* $dirplog/procesados/
+
+
+##############################################################################################
+

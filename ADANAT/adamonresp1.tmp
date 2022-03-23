@@ -1,0 +1,70 @@
+%ADAMON-I-STARTED,      04-APR-2018 17:13:31, Version 6.4.2.10 (AIX 64Bit)
+
+Database 4, startup at  6-MAR-2018 16:15:22
+ADANUC Version 6.4.2.10, PID 24183732
+
+
+
+
+                                   Highwaters
+
+              0            25           50           75        100%     Size
+              +------------+------------+------------+------------+
+Users         767                 |||||||                               2000
+Threads       3  ||||||||||||||||||||||||||||||||||||||||||||||||||       40
+LP            928|||||||||||||||||||||||||||||||||||||||||||           78641
+
+WP1 Flush     184751                                                  262134
+Write Limit   196435968   
+BP Hit Rate   99                                                  
+
+Work Pool     0||||||||||||                                           204800
+
+ASSO          1362G                                                 1600G
+DATA          822G                                                  1400G
+PLOG(73)      57M                                                   65280M
+
+
+                                   Highwaters
+
+              0            25           50           75        100%     Size
+              +------------+------------+------------+------------+
+Users         767                 |||||||                               2000
+Threads       4    ||||||||||||||||||||||||||||||||||||||||||||||||       40
+LP            928|||||||||||||||||||||||||||||||||||||||||||           78641
+
+WP1 Flush     184779                                                  262134
+Write Limit   197271552    
+BP Hit Rate   99                                                  
+
+Work Pool     0||||||||||||                                           204800
+
+ASSO          1362G                                                 1600G
+DATA          822G                                                  1400G
+PLOG(73)      57M                                                   65280M
+
+
+Summary (measurement time: 00:00:02)
+
+                              Totals    Ratio per sec
+-----------------------------------------------------
+Commands     :                56757            28378
+ASSO I/Os    :                  370              185
+DATA I/Os    :                 3893             1946
+WORK I/Os    :                  507              253
+TEMP I/Os    :                    0                0
+PLOG I/Os    :                  569              284
+Throwbacks   :                    0                0
+Buffer Hit   :                   99%
+Buffer flushs:                    0
+
+                   Size  Highwater    Ratio
+-------------------------------------------
+Users        :     2000        1055     53%
+Threads      :       40          40    100%
+ WP1 Limit   :    78641       69581     89%
+Work pool    :   204800       51200     25%
+ASSO         :     1600G       1362G    98%
+DATA         :     1400G        822G   100%
+PLOG(73)     : 66846374 KB     58350 KB    1%
+%ADAMON-I-TERMINATED,   04-APR-2018 17:13:34, elapsed time: 00:00:03
